@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="#">IgnouStudyStore</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">IgnouStudyStore</span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li><a href="#">HOME</a></li>
+          <li>
+            <a href="#">BCA</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href="#">Assignment</a></li>
+              <li><a href="#">Study Materials</a></li>
+              <li><a href="#">Guess Paper</a></li>
+              <li class="more">
+                <span><a href="#">More</a>
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="#">projects</a></li>
+                  <li><a href="#">previous year paper</a></li>
+                  <li><a href="#">Interview</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">MCA</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><a href="#">Assignments</a></li>
+              <li><a href="#">Study materials</a></li>
+              <li><a href="#">Guess paper</a></li>
+              <li><a href="#">Previous year paper</a></li>
+            </ul>
+          </li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">CONTACT US</a></li>
+<li><a href="#">Sign Up</a></li>
+<li><a href="#">Login</a></li>
+        </ul>
+      </div>
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <div class="input-box">
+          <input id="productSearch" onkeyup="searchProducts()" type="text" placeholder="Search...">
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="login-container" style="position:relative;top:150px">
+    <div class="login-box">
+      <h2>Register</h2>
+      <form action="login.php" method="POST">
+        <div class="input-group">
+          <label for="Name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+                <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+                <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+                <div class="input-group">
+          <label for="password">Repeat Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <p class="register-link">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
