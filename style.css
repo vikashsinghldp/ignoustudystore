@@ -197,7 +197,7 @@ a {
 .slider {
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: auto;
 }
 
 .slider .slide {
