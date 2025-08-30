@@ -293,6 +293,10 @@ border: 1px solid rgba(194, 91, 166, 0.3);
   max-width: 200px;
   max-height: 280px;
 }
+.product:hover{
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 .product .btn{
   text-decoration: none;
   background-color: #101;
@@ -306,7 +310,7 @@ border: 1px solid rgba(194, 91, 166, 0.3);
   border-radius: 5px;
 }
 .product .product_detail{
-  font-size:0.5rem;
+  font-size:1rem;
   font-weight: bold;
 }
 .courses{
