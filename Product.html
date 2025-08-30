@@ -1,100 +1,308 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-   <title>IgnouStudyStore</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-   <script src="script.js" defer></script>
-   </head>
-<body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - IGNOU Study Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    /* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+}
+.center{
+  text-align: center;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.hide{
+  display: none;
+}
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-    <nav class="nav">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #f0faff;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 10px;
+background: rgba(247, 66, 148, 1.0);
+background: linear-gradient(135deg, rgba(247, 66, 148, 1.0), rgba(249, 140, 206, 1.0));
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.nav,
+.nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  justify-content: space-between;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav .logo {
+  font-size: 22px;
+  font-weight: 500;
+}
+.nav .nav-links {
+  column-gap: 20px;
+  list-style: none;
+}
+.nav .nav-links a {
+  transition: all 0.2s linear;
+}
+.nav.openSearch .nav-links a {
+  opacity: 0;
+  pointer-events: none;
+}
+.nav .search-icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav .search-box {
+  position: absolute;
+  right: 250px;
+  height: 45px;
+  max-width: 555px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s linear;
+}
+.nav.openSearch .search-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box .search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  left: 15px;
+  color: #1b2d4f;
+  transform: translateY(-50%);
+}
+.search-box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 0 15px 0 45px;
+}
+
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+  display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 1160px) {
+  .nav {
+    padding: 15px 100px;
+  }
+  .nav .search-box {
+    right: 150px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .nav {
+    padding: 15px 50px;
+  }
+  .nav .search-box {
+    right: 100px;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: block;
+  }
+  .nav {
+    padding: 15px 20px;
+  }
+  .nav .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    max-width: 280px;
+    width: 100%;
+    padding-top: 100px;
+    row-gap: 30px;
+    flex-direction: column;
+    background:linear-gradient(135deg, rgba(247, 66, 148, 1.0), rgba(249, 140, 206, 1.0));
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    z-index: 100;
+    overflow-y: scroll;
+  }
+  .hide{
+    display: block;
+    position: fixed;
+    top: 20px;
+    z-index: 1000;
+    color:pink;
+    font-size: 20px;
+  }
+  .nav.openNav .nav-links {
+    left: 0;
+  }
+  .nav .navOpenBtn {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .search-box {
+    top: calc(100% + 10px);
+    max-width: calc(100% - 20px);
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+.logo img{
+  width: 60px;
+  height: 50px;
+}
+
+    .product-section {
+
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .product-section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #004aad;
+    }
+
+    .product-section p {
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 1.3rem;
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .product-card span {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .product-card a {
+      display: inline-block;
+      text-decoration: none;
+      background: #25D366; /* WhatsApp green */
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .product-card a:hover {
+      background: #1da851;
+    }
+  </style>
+</head>
+<body>
+<header>
+   <nav class="nav">
       <i class="uil uil-bars navOpenBtn"></i>
-      <a href="#" class="logo">IgnouStudyStore</a>
+      <a href="#" class="logo"><img src="images/logo1.png"></a>
       <ul class="nav-links">
         <i class="uil uil-times navCloseBtn"></i>
         <h2 class="hide">IgnouStudyStore</h2>
         <li><a href="#">Home</a></li>
-        <li class="menu-item"><a href="#">Solve Assignment </a>
-        <ul class="dropdown">
-          <li><a href="#">Bachelor's Degree Programmes</a></li>
-          <li><a href="#">Master's Degree Programmes</a></li>
-          <li><a href="#">P.G. Diploma Programmes</a></li>
-          <li><a href="#">Diploma Programmes</a></li>
-          <li><a href="#">Certificate Programmes</a></li>
-          <li><a href="#">P.G. certificate Programmes</a></li>
-          <li><a href="#">Appreciation Programmes</a></li>
-        </ul>
+        <li class="menu-item"><a href="#">Products</a>
+        <!-- <ul class="dropdown">
+          <li><a href="#">Assignment</a></li>
+          <li><a href="#">Solved Previous Year Question</a></li>
+          <li><a href="#">Guess Paper & Guide Book</a></li>
+          <li><a href="#">Notes</a></li>
+          <li><a href="#">Synposis & Project</a></li>
+        </ul> -->
         </li>
-        <li class="menu-item"><a href="#">Handwritten Assignment<br>soft copies</a>
-        <ul class="dropdown">
-          <li><a href="#">Bachelor's Degree Programmes</a></li>
-          <li><a href="#">Master's Degree Programmes</a></li>
-          <li><a href="#">P.G. Diploma Programmes</a></li>
-          <li><a href="#">Diploma Programmes</a></li>
-          <li><a href="#">Certificate Programmes</a></li>
-          <li><a href="#">P.G. certificate Programmes</a></li>
-          <li><a href="#">Appreciation Programmes</a></li>
-        </ul>
-        </li>
-        
-        <li class="menu-item"><a href="#">Handwritten Assignment<br>Hard copies</a>
-        <ul class="dropdown">
-          <li><a href="#">Bachelor's Degree Programmes</a></li>
-          <li><a href="#">Master's Degree Programmes</a></li>
-          <li><a href="#">P.G. Diploma Programmes</a></li>
-          <li><a href="#">Diploma Programmes</a></li>
-          <li><a href="#">Certificate Programmes</a></li>
-          <li><a href="#">P.G. certificate Programmes</a></li>
-          <li><a href="#">Appreciation Programmes</a></li>
-        </ul></li>
-        <li class="menu-item"><a href="#">Solved previous year<br>Question paper</a>
-        <ul class="dropdown">
-          <li><a href="#">Bachelor's Degree Programmes</a></li>
-          <li><a href="#">Master's Degree Programmes</a></li>
-          <li><a href="#">P.G. Diploma Programmes</a></li>
-          <li><a href="#">Diploma Programmes</a></li>
-          <li><a href="#">Certificate Programmes</a></li>
-          <li><a href="#">P.G. certificate Programmes</a></li>
-          <li><a href="#">Appreciation Programmes</a></li>
-        </ul></li>
-        <li class="menu-item"><a href="#">Guess paper & Guide books</a>
-        <ul class="dropdown">
-          <li><a href="#">Bachelor's Degree Programmes</a></li>
-          <li><a href="#">Master's Degree Programmes</a></li>
-          <li><a href="#">P.G. Diploma Programmes</a></li>
-          <li><a href="#">Diploma Programmes</a></li>
-          <li><a href="#">Certificate Programmes</a></li>
-          <li><a href="#">P.G. certificate Programmes</a></li>
-          <li><a href="#">Appreciation Programmes</a></li>
-        </ul></li>
-        <li class="menu-item"><a href="#">Handwritten & computer<br>typed notes</a>
-       <ul class="dropdown">
-          <li><a href="#">Bachelor's Degree Programmes</a></li>
-          <li><a href="#">Master's Degree Programmes</a></li>
-          <li><a href="#">P.G. Diploma Programmes</a></li>
-          <li><a href="#">Diploma Programmes</a></li>
-          <li><a href="#">Certificate Programmes</a></li>
-          <li><a href="#">P.G. certificate Programmes</a></li>
-          <li><a href="#">Appreciation Programmes</a></li>
-        </ul> </li>
-        <li class="menu-item"><a href="#">Synposis & Projects verified</a>
-       <ul class="dropdown">
-          <li><a href="#">Bachelor's Degree Programmes</a></li>
-          <li><a href="#">Master's Degree Programmes</a></li>
-          <li><a href="#">P.G. Diploma Programmes</a></li>
-          <li><a href="#">Diploma Programmes</a></li>
-          <li><a href="#">Certificate Programmes</a></li>
-          <li><a href="#">P.G. certificate Programmes</a></li>
-          <li><a href="#">Appreciation Programmes</a></li>
-        </ul> </li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+      
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <i class="uil uil-search search-icon" id="searchIcon"></i>
       <div class="search-box">
@@ -102,58 +310,51 @@
         <input id="searchInput" type="text" placeholder="Search here..." />
       </div>
     </nav>
-        <section id="home" class="slider">
-    <div class="slide active">
-      <img src="images/img-1.jpg" alt="Slide 1">
-    </div>
-    <div class="slide">
-      <img src="images/img-2.jpg" alt="Slide 2">
-    </div>
-    <div class="slide">
-      <img src="images/img-3.jpg" alt="Slide 3">
+</header>
+  <section class="product-section">
+    <h2>Our Products</h2>
+    <p>High-quality IGNOU study materials to help you excel in Graduation & Post-Graduation.</p>
+
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="images/assignment.jpg" alt="Solved Assignments">
+        <h3>Solved Assignments</h3>
+        <p>Accurate and updated IGNOU solved assignments for all programs.</p>
+        <span>₹199 - ₹399</span>
+        <a href="https://wa.me/919876543210?text=Hello%20I%20am%20interested%20in%20buying%20Solved%20Assignments%20from%20IGNOU%20Study%20Store" target="_blank">Buy Now</a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="images/project.jpg" alt="Projects & Synopsis">
+        <h3>Projects & Synopsis</h3>
+        <p>Well-structured project reports and synopsis for IGNOU courses.</p>
+        <span>₹499 - ₹999</span>
+        <a href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20buy%20Projects%20%26%20Synopsis%20from%20IGNOU%20Study%20Store" target="_blank">Buy Now</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="images/question-paper.jpg" alt="Previous Year Question Papers">
+        <h3>Previous Year Question Papers</h3>
+        <p>Collection of solved previous year IGNOU question papers for better exam prep.</p>
+        <span>₹399</span>
+        <a href="https://wa.me/919876543210?text=Hello%20I%20would%20like%20to%20purchase%20Previous%20Year%20Question%20Papers%20from%20IGNOU%20Study%20Store" target="_blank">Buy Now</a>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="images/notes.jpg" alt="Study Notes">
+        <h3>Study Notes</h3>
+        <p>Easy-to-understand notes for Graduation & Post-Graduation courses.</p>
+        <span>₹299 - ₹599</span>
+        <a href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20buy%20Study%20Notes%20for%20Graduation%20%26%20Post-Graduation%20from%20IGNOU%20Study%20Store" target="_blank">Buy Now</a>
+      </div>
+
     </div>
   </section>
-<marquee>IGNOU Opens Fresh Admissions for January 2025 Session (ODL & Online Mode) </marquee>
-<div class="productList" id="prodList">
-  
-</div>
-    <footer>
-        <div class="footer-container">
-            <!-- Social Media Links -->
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-            </div>
-            <!-- Company Address and Contact -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p>123 Main Street<br>City, State, 12345</p>
-                <p>Email: info@company.com</p>
-                <p>Phone: (123) 456-7890</p>
-            </div>
-            <!-- Quick Links -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-  <script src="script.js">
-    
-  </script>
-  <script src="product.js"></script>
-  <script>
-    
-  </script>
+
 </body>
 </html>
