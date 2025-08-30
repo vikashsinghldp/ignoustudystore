@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - IGNOU Study Store</title>
+   
+  
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+   <script src="script.js" defer></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 50px auto;
+    }
+
+    .about-image {
+      flex: 1 1 400px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .about-content {
+      flex: 1 1 500px;
+      padding: 20px;
+    }
+
+    .about-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #004aad;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .about-content ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .about-content ul li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .about-content ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #004aad;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-content h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header>
+         <nav class="nav">
+      <i class="uil uil-bars navOpenBtn"></i>
+      <a href="#" class="logo"><img src="images/logo1.png"></a>
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <h2 class="hide">IgnouStudyStore</h2>
+        <li><a href="index.html">Home</a></li>
+        <li class="menu-item"><a href="#product">Products</a>
+        <!-- <ul class="dropdown">
+          <li><a href="#">Assignment</a></li>
+          <li><a href="#">Solved Previous Year Question</a></li>
+          <li><a href="#">Guess Paper & Guide Book</a></li>
+          <li><a href="#">Notes</a></li>
+          <li><a href="#">Synposis & Project</a></li>
+        </ul> -->
+        </li>
+      
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+      <div class="search-box">
+        <i class="uil uil-search search-icon"></i>
+        <input id="searchInput" type="text" placeholder="Search here..." />
+      </div>
+    </nav>
+
+    </header>
+
+  <section class="about-section">
+    <div class="about-image">
+      <img src="images/girl.png" alt="IGNOU Study Materials">
+    </div>
+    <div class="about-content">
+      <h2>About IGNOU Study Store</h2>
+      <p>Welcome to <strong>IGNOU Study Store</strong>, your one-stop destination for all study materials, question papers, and resources to help you succeed in your IGNOU journey. We are committed to making learning easier, accessible, and affordable for every student.</p>
+      
+      <p>Our mission is to provide reliable resources that save your time and boost your academic performance. Whether you need solved assignments, project guides, or previous year papers, we’ve got you covered.</p>
+      
+      <ul>
+        <li>100% Authentic IGNOU Study Materials</li>
+        <li>Affordable Prices for Students</li>
+        <li>Previous Year Question Papers</li>
+        <li>Projects, Synopsis & Assignments</li>
+        <li>Fast & Easy Access to Resources</li>
+      </ul>
+    </div>
+  </section>
+ <footer>
+        <div class="footer-container">
+            <!-- Social Media Links -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <!-- Company Address and Contact -->
+            <div class="footer-column">
+                <h3>Ignou Study Store</h3>
+                <p>R.N. College Road<br>Hajipur, Bihar, 844101</p>
+                <p>Email: ignoustudystore@gmail.com</p>
+                <p>Phone: <tel href="+91 6204529785">6204529785</tel></p>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+              <div class="footer-column">
+                <h3>Our Product</h3>
+                <ul>
+                    <li><a href="index.html">Solved Assignment</a></li>
+                    <li><a href="about.html">Project & Synposis</a></li>
+                    <li><a href="Product.html">Solved Previous Year Question</a></li>
+                    <li><a href="#contact">Study notes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
