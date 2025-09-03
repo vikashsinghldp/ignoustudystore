@@ -33,6 +33,10 @@ background: linear-gradient(135deg, rgba(247, 66, 148, 1.0), rgba(249, 140, 206,
 a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.2rem;
+}
+a:hover{
+  color: #03132b;
 }
 .nav .logo {
   font-size: 22px;
@@ -75,6 +79,9 @@ a {
   left: 15px;
   color: #1b2d4f;
   transform: translateY(-50%);
+}
+.hide{
+  display: none;
 }
 .search-box input {
   height: 100%;
@@ -138,7 +145,7 @@ a {
     position: fixed;
     top: 20px;
     z-index: 1000;
-    color:pink;
+    color:rgb(4, 4, 36);
     font-size: 20px;
   }
   .nav.openNav .nav-links {
@@ -181,7 +188,7 @@ a {
 
   /* Background with gradient overlay */
   background: 
-    linear-gradient(rgba(0,0,230, 0.5), rgba(138, 43, 226, 0.5)), 
+    linear-gradient(rgba(4, 4, 5, 0.9), rgba(110, 73, 145, 0.5)), 
     url("images/bg.jpg") no-repeat center center/cover;
 }
 
@@ -266,95 +273,85 @@ a {
     }
 
 
+.product-section {
 
-.product-page {
-  padding: 2rem;
-  text-align: center;
-  background: 
-  
-}
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
 
-.product-grid {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    .product-section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #004aad;
+    }
 
-.product {
-  /* From https://css.glass */
-background: pink;
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(194, 91, 166, 0.3);
-  padding: 1rem;
-  max-width: 200px;
-  max-height: 280px;
-}
-.product:hover{
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-.product .btn{
-  text-decoration: none;
-  background-color: #101;
-  color: #fff;
-  padding: 0.1rem 0.4rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-}
-.product img {
-  width: 100%;
-  border-radius: 5px;
-}
-.product .product_detail{
-  font-size:1rem;
-  font-weight: bold;
-}
-.courses{
-  width:100%;
-}
-.course-grid{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.course{
-  max-width: 200px;
-  max-height: 400px;
-  margin: 2px 2px;
-  padding: 5px 10px;
-}
-.course img{
-  width:100%;
-}
-.courses a{
-  display: block;
-  color:violet;
-  text-decoration: none;
-  
-}
-.image-grid{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.image-grid .a-image{
- max-width:360px;
- margin:20px;
-}
-.image-grid img{
-  width: 100%;
-  
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
+    .product-section p {
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 1.3rem;
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .product-card span {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .product-card a {
+      display: inline-block;
+      text-decoration: none;
+      background: #25D366; /* WhatsApp green */
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .product-card a:hover {
+      background: #1da851;
+    }
 footer {
-    background-color: #333;
+    background-color: #0b0d12;
     color: #fff;
     padding: 20px 0;
 }
@@ -395,6 +392,7 @@ footer {
 
 .footer-column ul li a:hover {
     text-decoration: underline;
+    color: pink;
 }
 
 .footer-column p {
@@ -412,59 +410,6 @@ footer {
     }
 }
 
-
-/* Login Container */
-.login-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height:500px;
-  padding: 20px;
-  position: relative;
-  top: 100px;
-}
-
-/* Login Box */
-.login-box {
-  width: 100%;
-  max-width: 400px;
-  background: pink;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.login-box h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #003399;
-}
-
-/* Input Group */
-.input-group {
-  margin-bottom: 15px;
-}
-
-.input-group label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  outline: none;
-}
-
-.input-group input:focus {
-  border-color: violet;
-}
 
 /* Button */
 .btn {
@@ -561,68 +506,7 @@ footer {
   }
 }
 .logo img{
-  width:50px;
+  width:150px;
   
 }
-.pyq container{
-  width: 90%;
-  margin: 0px auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-}
 
-.pyq .card{
-  background: white;
-  border-radius: 8px;
-  flex: 1;
-  min-width: 150px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  margin: 10px;
-
-}
-.pyq .card img{
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  margin-bottom: 10px;
-
-}
-.pyq .card .content{
-  padding: 14px;
-  color: black;
-  font-size: 16px;
-}
-.pyq .card .content h3{
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: violet;
-}
-.price{
-  margin: 10px 0;
-  display: block;
-  color: rgb(38, 38, 245);
-  text-align: center;
-  border: 1px solid violet;
-}
-.pyq .card .card-header{
-  background: rgba(247, 121, 18, 0.3);
-  padding: 5px;
-  text-align: center;
-  font-weight: 800;
-}
-.pyq .card .card-header h1{
-
-}
-.card-course{
-  font-size: 45px;
-  color: white;
-  font-weight: 900;
-}
-.m_degree{
-  font-size: 20px;
-}
